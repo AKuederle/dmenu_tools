@@ -1,0 +1,14 @@
+#!/bin/bash
+
+declare -A gitdic
+dirlist=()
+while IFS= read -d $'\0' -r file ; do
+   dir=$(basename "$(dirname "$file")")
+   gitdic["$dir"]="$(dirname "$file")"
+   dirlist+="$dir\n"
+ done < <(find ~ -type d -name .git -print0)
+choice=$(echo -e "$dirlist" | dmenu -fn "-xos4-terminus-medium-r-*-*-20-*")
+if [ -n "$choice" ]
+    then
+        xfce4-terminal --working-directory="${gitdic["$choice"]}"
+fi
