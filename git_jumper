@@ -1,4 +1,9 @@
 #!/bin/bash
+#title           : git_jumper
+#description     : A simple dmenu call to navigate your git repos 
+#author		 : Arne Küderle
+#date            : 201502
+#notes           : Install dmenu to use this script. For the best experience create a hotkey
 
 declare -A gitdic
 dirlist=()
