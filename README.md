@@ -1,3 +1,19 @@
+# Dmenu_tools
+
+A little repository, where I collect small dmenu scripts I am using (currently 2 xD).
+
+## Win_switcher
+
+A small script, which allows to change the active window (similar to alt+Tab in most of the Wmm) using dmenu and wnctrl. I simply lists all currently active windows and let you select a window in the typical dmenu way.
+
+### Dependency
+
+Dmenu and wnctrl (and a Window manager, which is supported by winctrl)
+
+### Future Plans
+
+Add a filter, so that Desktop and the quake console are not displayed in the list.
+
 ## Git_jumper
 
 Git_jumper is a small script, which uses dmenu to let you quickly jump to any git repository on your PC.
