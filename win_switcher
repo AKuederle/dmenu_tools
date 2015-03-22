@@ -1,0 +1,8 @@
+#!/bin/bash
+#title           : win_switcher
+#description     : A better Alt+Tab build with dmenu
+#author      : Arne Küderle
+#date            : 201503
+#notes           : Install dmenu and winctrl to use this script. For the best experience create a hotkey
+
+wnctrl -a $(wmctrl -l | awk '{$3=""; $2=""; $1=""; print $0}' | dmenu -i -l 8 -fn "-xos4-terminus-medium-r-*-*-20-*")
