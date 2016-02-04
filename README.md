@@ -1,6 +1,6 @@
 # Dmenu_tools
 
-A little repository, where I collect small dmenu scripts I am using (currently 2 xD).
+A little repository, where I collect small dmenu scripts I am using (currently 3 xD).
 
 ## Win_switcher
 
@@ -33,3 +33,15 @@ You can simply limit the search to certain folders by calling the find command w
 #### Change the action
 
 To change what happens with selected git repo you can easily replace the command inside the if statement with whatever you want (open different terminal, open file browser, open your texteditor ...). The path to the selected git repo can be obtained using : "${gitdic["$choice"]}"
+
+## Dmenu_shutdown 
+
+Dmenu_shutdown is a simple script to logout, hibernate, shutdown, sleep, or restart.
+
+### Dependency
+
+Obviously you need to have dmenu installed on your machine.
+
+### Customisation
+
+Before using the script it has to be customized for your specific system. Add the logout command for your WM and use different shutdown/hibernate commands, if your are using a powermanagment tool.
