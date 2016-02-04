@@ -1,0 +1,32 @@
+#!/bin/bash
+#title           : dmenu_shutdown
+#description     : A simple dmenu call to logout, hibernate, shutdown, sleep, or restart 
+#author      : Arne Küderle
+#date            : 201602
+#notes           : Install dmenu to use this script. For the best experience create a hotkey
+
+actions=("logout\nrestart\nshutdown\nsleep\nhibernate")
+action=$(echo -e $actions | dmenu -fn "-xos4-terminus-medium-r-*-*-20-*")
+case "$action" in
+    logout)
+        echo 'awesome.quit()' | awesome-client #You should change this line depending on your WM
+        ;;
+        
+    restart)
+        systemctl reboot
+        ;;
+
+    shutdown)
+        systemctl poweroff
+        
+        ;;
+
+    sleep)
+        systemctl suspend
+        ;;
+
+    hibernate)
+        systemctl hibernate
+        ;;
+esac
+
